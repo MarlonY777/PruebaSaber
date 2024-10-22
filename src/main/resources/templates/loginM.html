@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+
+    <title>Login</title>
+</head>
+
+<style>
+.container-card {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.card {
+    border-radius: 5px;
+    box-shadow: 0px 10px 30px 5px rgba(3, 166, 60, 1);
+    overflow: hidden;
+}
+
+
+
+.card-header {
+    background-color:	#0CF25D;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-body {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.form-label {
+    color: #333;
+    font-weight: bold;
+}
+
+.form-control {
+	background-color: #f0f0f0;
+    border: none;
+    border-bottom: 1px solid #03A63C;
+    border-radius: 0;
+}
+    
+</style>
+
+<body>
+	<header class="container-fluid pt-1 pb-1 d-flex justify-content-center">
+		    <p class="text-light mb-0 p-2 fs-5">SPRING - Marlon Yesid Sánchez Moncada</p>
+		</header>
+		<nav class="navbar navbar-expand-lg navbar-dark p-3" id="menu">
+		    <div class="container">
+		        <a class="navbar-brand" href="#">
+		            <img th:src="@{/java_logo_blanco.png}" alt="#">
+		            <span class="ml-2 text-white fw-bold">Spring Framework + MicroServices</span>
+		        </a>
+		        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+		                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		            <span class="navbar-toggler-icon"></span>
+		        </button>
+		        <div class="collapse navbar-collapse" id="navbarNav">
+		            <ul class="navbar-nav ml-auto">
+		                <!-- Agrega los elementos del menú aquí -->
+						<li class="nav-item">
+							<a class="nav-link" href="/">
+						    	<img th:src="@{/home.png}" alt="Imagen 0" class="btn-img custom-size">
+						    </a>
+						</li>
+		            </ul>
+		        </div>
+		    </div>
+		</nav>
+    <div class="container-card">
+        <div class="card">
+            <div class="card-header">
+				<img th:src="@{/Icfes.png}" alt="Icfes Logo" class="img-fluid" style="width: 200px; height: auto;">
+            </div>
+            <div class="card-body">
+                <form action="/login" method="post">
+					<h2 class="section__title">Iniciar Sesión</h2>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Ingrese su Gmail</label>
+                        <input type="email" name="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Ingrese su Contraseña</label>
+                        <input type="password" name="password" id="password" class="form-control" required>
+                    </div>
+							<div class="return mb-3">
+							    <a class="btn btn-success" href="/">
+							        <i class="bi bi-box-arrow-left" style="color: white;"></i> Volver
+							    </a>
+							</div>
+							<div class="btm-primary">
+								<input type="submit" class="btn btn-primary me-4" imge value="Ingresar">
+							</div>
+                </form>
+            </div>
+        </div>
+    </div>
+	<footer class="bg-dark text-white mt-5 py-3">
+	    <div class="container d-flex justify-content-center justify-content-lg-between align-items-center flex-wrap">
+	        <p class="text-lg-start flex-grow-1 mb-0">&copy; Marlon Yesid Sánchez Moncada - Derechos Reservados.</p>
+	        <div class="social-links d-flex justify-content-center justify-content-lg-end align-items-center">
+	            <a href="#"><img th:src="@{/facebook.png}" alt="Facebook" width="40px" height="40px"></a>
+	            <a href="#"><img th:src="@{/instagram.png}" alt="Instagram" width="40px" height="40px"></a>
+	            <a href="#"><img th:src="@{/twitter.png}" alt="Twitter" width="40px" height="40px"></a>
+	            <a href="#"><img th:src="@{/youtube.png}" alt="YouTube" width="40px" height="40px"></a>
+	        </div>
+	    </div>
+	</footer>
+	
+	
+	    <!-- Optional JavaScript -->
+	    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	    <script th:src="@{https://code.jquery.com/jquery-3.3.1.slim.min.js}" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	    <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js}" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	    <script th:src="@{https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js}" intity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

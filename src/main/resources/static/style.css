@@ -1,0 +1,104 @@
+
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+#navbar {
+    background-color: #00796b;
+  }
+
+
+.container-fluid{
+	background-color: #04D939;
+}
+h1 {
+    color: #04D939;
+}
+h2{
+	color: #03A63C;
+	text-align: center;
+ }
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #00796b;
+    text-align: center;
+    padding: 10px 0;
+    color: #e0f7fa;
+    margin-top: 70px;
+  }
+
+     /* Estilos personalizados para el navbar */
+     .navbar {
+        background-color: #343a40; /* Color de fondo */
+    }
+    .navbar-brand img {
+        width: 40px; /* Ancho de la imagen del logo */
+        height: 40px; /* Alto de la imagen del logo */
+        margin-right: 10px; /* Margen derecho entre el logo y el texto */
+    }
+    .navbar-brand span {
+        font-size: 1.5rem; /* Tamaño del texto del navbar */
+        color: #fff; /* Color del texto */
+    }
+    .navbar-toggler {
+        border-color: #fff; /* Color del borde del botón toggler */
+    }
+    .navbar-toggler-icon {
+        background-color: #fff;
+    }
+    .navbar-nav .nav-link {
+        color: #fff;
+    }
+    .navbar-nav .nav-link:hover {
+        color: #04D939;
+    }
+    
+.btn-custom {
+			            background: none;
+			            border: none;
+			            padding: 0;
+			            margin: 0;
+			            cursor: pointer;
+			            text-align: center;
+			            color: #333;
+			        }
+			        .btn-custom img {
+			            width: 170px;
+			            height: auto;
+			            display: block;
+			            margin: 0 auto;
+			        }
+			        .header {
+			            display: flex;
+			            align-items: center;
+			            justify-content: center;
+			            margin-bottom: 20px;
+			        }
+			        .header img {
+			            width: 60px;
+			            height: auto;
+			            margin-right: 10px;
+			            border-radius: 7%;
+			        }
+			        .navbar-brand {
+			            display: flex;
+			            align-items: center;
+			        }
+			        
+.btn-img {
+    width: 100px;
+    height: 100px;
+}
+
+.custom-size {
+    width: 35px;  /* Ancho de 10px */
+    height: 35px; /* Alto de 10px */
+}
+.custom-header {
+    font-size: 2.5rem; /* Tamaño personalizado */
+    font-weight: bold; /* Opcional para negrita */
+}
+

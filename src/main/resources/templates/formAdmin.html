@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Formulario Registro</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+</head>
+
+<body>
+	<header class="container-fluid pt-1 pb-1 d-flex justify-content-center">
+			    <p class="text-light mb-0 p-2 fs-5">SPRING - Marlon Yesid Sánchez Moncada</p>
+			</header>
+			<nav class="navbar navbar-expand-lg navbar-dark p-3" id="menu">
+			    <div class="container">
+			        <a class="navbar-brand" href="#">
+			            <img th:src="@{/java_logo_blanco.png}" alt="#">
+			            <span class="ml-2 text-white fw-bold">Spring Framework + MicroServices</span>
+			        </a>
+			        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+			                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			            <span class="navbar-toggler-icon"></span>
+			        </button>
+			        <div class="collapse navbar-collapse" id="navbarNav">
+			            <ul class="navbar-nav ml-auto">
+			                <!-- Agrega los elementos del menú aquí -->
+							<li class="nav-item">
+								<a class="nav-link" href="/">
+							    	<img th:src="@{/home.png}" alt="Imagen 0" class="btn-img custom-size">
+							    </a>
+							</li>
+			            </ul>
+			        </div>
+			    </div>
+			</nav>
+<main>
+    <div class="container p-4">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+			<img th:src="@{/Icfes.png}" alt="Icfes Logo" class="img-fluid mb-4" style="width: 200px; height: auto;">
+			<h2 class="text-center custom-header mb-4">Administrador</h2>
+            <form id="adminForm" th:action="@{/admins/save}" th:object="${admin}" method="post" onsubmit="return validateForm()">
+                <input type="hidden" th:field="*{id}">
+                <div class="form-group">
+                    <label for="email">Correo:</label>
+                    <input type="text" class="form-control" id="email" th:field="*{email}">
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" class="form-control" id="password" th:field="*{password}">
+                </div>
+
+                <div class="form-row justify-content-center">
+                    <div class="form-group col-md-6">
+                        <button type="submit" class="btn btn-primary btn-block">Guardar</button>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <a th:href="@{/admins/}" class="btn btn-success btn-block">
+							<i class="bi bi-box-arrow-left" style="color: white;"></i> Volver
+						</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+<script>
+    function validateForm() {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        if (email.trim() === '' || password.trim() === '') {
+            alert('Por favor completa todos los campos.');
+            return false;
+        }
+        return true;
+    }
+</script>
+<footer class="bg-dark text-white mt-5 py-3">
+    <div class="container d-flex justify-content-center justify-content-lg-between align-items-center flex-wrap">
+        <p class="text-lg-start flex-grow-1 mb-0">&copy; Marlon Yesid Sánchez Moncada - Derechos Reservados.</p>
+        <div class="social-links d-flex justify-content-center justify-content-lg-end align-items-center">
+            <a href="#"><img th:src="@{/facebook.png}" alt="Facebook" width="40px" height="40px"></a>
+            <a href="#"><img th:src="@{/instagram.png}" alt="Instagram" width="40px" height="40px"></a>
+            <a href="#"><img th:src="@{/twitter.png}" alt="Twitter" width="40px" height="40px"></a>
+            <a href="#"><img th:src="@{/youtube.png}" alt="YouTube" width="40px" height="40px"></a>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
